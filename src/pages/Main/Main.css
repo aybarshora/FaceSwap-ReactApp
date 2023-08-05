@@ -68,14 +68,18 @@ body {
 .lower-section {
   margin-top: 10%;
   text-align: center;
+  display: block;
 }
 
 .lower-section img {
+
   max-width: 300px;
   height: auto;
-  margin-bottom: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 auto;
+  transform: scaleX(-1);
 }
 
 .lower-section input[type="file"] {
@@ -84,12 +88,16 @@ body {
 
 .lower-section label {
   display: inline-block;
-  margin-bottom: 10px;
+  margin: 30px;
   padding: 10px;
-  background-color: #007bff;
+  background-color: #596454;
   color: #fff;
   border-radius: 8px;
   cursor: pointer;
+}
+
+.btn-photo:hover{
+  background-color: #71BEF6;
 }
 
 .lower-section p {
@@ -139,7 +147,7 @@ body {
 }
 
 .form-section button:hover {
-  background-color: #596454;
+  background-color: #71BEF6;
 }
 
 /* Optional styles for better responsiveness */
@@ -265,12 +273,13 @@ button {
   border: 1px solid #ccc;
   border-radius: 4px;
   background-color: #596454;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  
 }
 
-button.active {
-  background-color: #71BEF6;
-  color: #fff;
-}
 
 .submit-button {
   padding: 10px 20px;
@@ -287,6 +296,7 @@ button.active {
 /* Hover effect */
 .submit-button:hover {
   background-color: #CECECE;
+  
 }
 
 /* Active effect */
@@ -296,4 +306,80 @@ button.active {
 
 img{
   border-radius: 70px;
+}
+
+.gender {
+  text-align: center;
+  margin: 20px;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 200;
+  font-size: 20px;
+  color: #CECECE;
+
+}
+
+.button-container {
+  display: inline-block;
+}
+
+/* Styles for the buttons */
+.gender button {
+  background-color: #596454;
+  font-size: 16px;
+  padding: 8px 16px;
+  margin: 4px;
+}
+
+/* Styles for the active button */
+.gender button.active {
+  background-color: #71BEF6;
+  color: #ffffff;
+}
+
+.form-container {
+  text-align: center;
+  margin: 20px; /* Optional: adjust margin as needed */
+}
+
+.form-section {
+  display: inline-block;
+  padding: 20px;
+  background-color: #1A1F2A;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  margin: 20px;
+  color: #CECECE;
+}
+
+input {
+  padding: 8px;
+  font-size: 14px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submit-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
 }

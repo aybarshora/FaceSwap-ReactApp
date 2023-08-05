@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'Work Sans';
+    font-style: bold;
+    font-weight: 700;
+    src: url('../../pages/Main/WorkSans-Bold.ttf') format('ttf');
+  }
+  
+  @font-face {
+    font-family: 'Work Sans';
+    font-style: regular;
+    font-weight: 400;
+    src: url('../../pages/Main/WorkSans-Regular.ttf') format('ttf');
+  }
+  
+
+.text-main{
+    font-family: 'Work Sans', sans-serif;
+  font-weight: 200;
+  font-size: 30px;
+  margin: 20px;
+  color: #CECECE;
+}
+
+
+
+.webcam {
+    transform: scaleX(-1);
+  }
+
+button {
+    margin: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #596454;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none; /* Remove focus outline */
+  }
+  
+button:hover {
+    background-color: #71BEF6;
+}

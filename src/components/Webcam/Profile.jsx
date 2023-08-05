@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Webcam from 'react-webcam'
+import './Profile.css'
 const WebcamComponent = () => <Webcam />
 const videoConstraints = {
   width: 300,
@@ -16,8 +17,8 @@ const Profile = ({ sendDataToParent }) => {
   })
   return (
     <div>
-      <h2 className="mb-5 text-center">
-        Make sure your face is clear 
+      <h2 className="text-main">
+        Make sure your face is clearly seen:
       </h2>
       <div>
         {picture == '' ? (
@@ -28,6 +29,7 @@ const Profile = ({ sendDataToParent }) => {
             width={300}
             screenshotFormat="image/jpeg"
             videoConstraints={videoConstraints}
+            className='webcam'
           />
         ) : (
           <img src={picture} />
@@ -40,7 +42,7 @@ const Profile = ({ sendDataToParent }) => {
               e.preventDefault()
               setPicture('')
             }}
-            className="btn btn-primary"
+            className="btn"
           >
             Retake
           </button>
@@ -50,7 +52,7 @@ const Profile = ({ sendDataToParent }) => {
               e.preventDefault()
               capture()
             }}
-            className="btn btn-danger"
+            className="btn"
           >
             Capture
           </button>
