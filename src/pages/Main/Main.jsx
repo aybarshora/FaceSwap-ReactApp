@@ -66,20 +66,15 @@ function Main() {
     console.error('Error:', error);
   }
 
-
 axios({
   method: "put",
   url: `http://104.248.26.55:8000/api/generate-random-image/${idOfPhoto}`,
-  
 
 })
   .then((res) => {
     this.info = res.statusText;
   })
   .catch((err) => console.log(err.response));
-
-  
-
 }
 
   const handleReceiveData = (data) => {
