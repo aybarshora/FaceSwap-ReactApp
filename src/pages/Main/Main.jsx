@@ -2,7 +2,6 @@ import './Main.css';
 import example from './example.png';
 import React, { useEffect, useState } from "react";
 import person from './person.png';
-import batyr from './eee1.png';
 import axios from 'axios';
 import  Popup  from '../../components/Popup/Popup';
 import Profile from '../../components/Webcam/Profile'
