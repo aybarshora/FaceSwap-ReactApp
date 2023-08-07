@@ -178,6 +178,9 @@ const Main = () => {
 
   return (
     <div>
+      <head>
+      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+      </head>
       {showPopup && <Popup  resetFormData={resetFormData} />}
       <div className="main-container">
         {/* Upper Section */}
