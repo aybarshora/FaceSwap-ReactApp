@@ -368,6 +368,7 @@ input {
   width: 100%;
   border: 1px solid #ccc;
   border-radius: 4px;
+  background-color: #CECECE;
 }
 
 .submit-button {
@@ -382,4 +383,10 @@ input {
 
 .submit-button:hover {
   background-color: #0056b3;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
 }

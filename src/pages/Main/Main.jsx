@@ -7,6 +7,8 @@ import person from './person.png';
 import './Main.css';
 
 const Main = () => {
+
+ 
  
   const [formData, setFormData] = useState({
     name: '',
@@ -17,6 +19,16 @@ const Main = () => {
     telegramTag: '',
     imageForView: null,
   });
+
+  const initialFormData = {
+    name: '',
+    sex: null,
+    yourImage: '',
+    chosenImage: null,
+    email: '',
+    telegramTag: '',
+    imageForView: null,
+  };
 
   const [showPopup, setShowPopup] = useState(false);
 
@@ -37,9 +49,66 @@ const Main = () => {
 
   const fileName = "batyyr.png";
 
+  const [formErrors, setFormErrors] = useState({
+    name: '',
+    email: '',
+    sex: '',
+    telegramTag: '',
+    yourImage: ''
+  });
+
+  const handleValidation = () => {
+    const { name, email, sex, telegramTag, yourImage } = formData;
+    let isValid = true;
+    const errors = {};
+    
+    if(!yourImage){
+      errors.yourImage = "You have to submit an image";
+      isValid = false;
+  
+    }
+
+    if (!name) {
+      errors.name = 'Name field cannot be empty';
+      isValid = false;
+    }
+
+    if (!email) {
+      errors.email = 'Email field cannot be empty';
+      isValid = false;
+    } else if (!isValidEmail(email)) {
+      errors.email = 'Please enter a valid email address';
+      isValid = false;
+    }
+
+    if(!sex){
+      errors.sex = 'Representation field cannot be empty';
+      isValid = false;
+    }
+
+    if(!telegramTag){
+      errors.telegramTag ='Telegram Tag field cannot be empty';
+      isValid = false;
+    }
+    setFormErrors(errors);
+    return isValid;
+  };
+
+  const isValidEmail = (email) => {
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    return emailPattern.test(email);
+  };
+
   const handleSubmit = async (event) => {
+    
     event.preventDefault();
-    setShowPopup(true);
+
+    const validationReturn = handleValidation();
+
+    if(validationReturn){
+      
+      setShowPopup(true);
+      console.log(`handleValitation: ${handleValidation()}`);
 
     const { name, sex, yourImage, email, telegramTag } = formData;
 
@@ -74,6 +143,8 @@ const Main = () => {
     } catch (error) {
       console.error('Error:', error);
     }
+    
+    }
   };
 
   const handleReceiveData = (data) => {
@@ -101,9 +172,13 @@ const Main = () => {
     });
   };
 
+  const resetFormData = () => {
+    setFormData(initialFormData);
+  };
+
   return (
     <div>
-      {showPopup && <Popup />}
+      {showPopup && <Popup  resetFormData={resetFormData} />}
       <div className="main-container">
         {/* Upper Section */}
         <div className="upper-section">
@@ -134,7 +209,9 @@ const Main = () => {
                 Chose photo from device <input type="file" onChange={handleChange} />
               </label>
             </div>
+            
           )}
+           <span className="error-message">{formErrors.yourImage}</span>
         </div>
 
         {/* Form Section */}
@@ -166,38 +243,45 @@ const Main = () => {
             >
               Girl
             </button>
+            
           </div>
+         
         </label>
+        <span className="error-message">{formErrors.sex}</span>
         </div>
 
         <div className="form-container">
   <form onSubmit={handleSubmit} className='form-section' encType="multipart/form-data">
     <div className="form-group">
-      <label htmlFor="name">Name:</label>
+      <label htmlFor="name">Name*</label>
       <input
         type="text"
         id="name"
         value={formData.name}
         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
       />
+      <span className="error-message">{formErrors.name}</span>
+       
     </div>
     <div className="form-group">
-      <label htmlFor="email">Email:</label>
+      <label htmlFor="email">Email*</label>
       <input
         type="email"
         id="email"
         value={formData.email}
         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
       />
+       <span className="error-message">{formErrors.email}</span>
     </div>
     <div className="form-group">
-      <label htmlFor="telegramTag">Telegram Tag:</label>
+      <label htmlFor="telegramTag">Telegram Tag*</label>
       <input
         type="text"
         id="telegramTag"
         value={formData.telegramTag}
         onChange={(e) => setFormData({ ...formData, telegramTag: e.target.value })}
       />
+       <span className="error-message">{formErrors.telegramTag}</span>
     </div>
     <button type="submit" className='submit-button'>
       Submit

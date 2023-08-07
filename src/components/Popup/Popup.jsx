@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import './Popup.css';
 
-function Popup() {
+const Popup = ({ resetFormData }) => {
  
 
   const handleStartOver = () => {
     window.location.reload();
+    resetFormData();
 
   };
 
