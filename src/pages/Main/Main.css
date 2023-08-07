@@ -390,3 +390,12 @@ input {
   font-size: 0.85rem;
   margin-top: 0.25rem;
 }
+
+.text-h2{
+ 
+    font-family: 'Work Sans', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  margin: 20px;
+  color: #CECECE;
+}

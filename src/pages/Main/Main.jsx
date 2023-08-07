@@ -196,13 +196,15 @@ const Main = () => {
         {/* Lower Section */}
         
         <div className="lower-section">
-        <Profile sendDataToParent={handleReceiveData} />
+        <Profile sendDataToParent={handleReceiveData} showPopup={showPopup} />
+        <h2 className="text-h2">Your image:</h2>
           {formData.yourImage ? (
             <div>
+           
               <img src={formData.imageForView} alt="Photo" id="upload-photo" />
               <label className="btn-photo">
-                Chose another photo from device<input type="file" onChange={handleChange} />
-              </label>
+                Chose another photo from device<input type="file" onChange={handleChange} /> </label>
+             
             </div>
           ) : (
             <div>

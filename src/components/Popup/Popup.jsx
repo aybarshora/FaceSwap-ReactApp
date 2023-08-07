@@ -5,9 +5,8 @@ const Popup = ({ resetFormData }) => {
  
 
   const handleStartOver = () => {
-    window.history.back();
     resetFormData();
-
+    window.history.back();
   };
 
   return (

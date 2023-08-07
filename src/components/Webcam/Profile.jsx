@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Webcam from 'react-webcam'
 import './Profile.css'
 const WebcamComponent = () => <Webcam />
@@ -7,13 +7,20 @@ const videoConstraints = {
   height: 300,
   facingMode: 'user',
 }
-const Profile = ({ sendDataToParent }) => {
+const Profile = (props ) => {
   const [picture, setPicture] = useState('');
   const webcamRef = React.useRef(null);
+  useEffect(() =>{
+    setPicture('');
+  }, [props.showPopup])
+  
+  const reload = () => {
+    setPicture('');
+  }
   const capture = React.useCallback(() => {
     const pictureSrc = webcamRef.current.getScreenshot()
     setPicture(pictureSrc);
-    sendDataToParent(pictureSrc);
+    props.sendDataToParent(pictureSrc);
   })
   return (
     <div>
