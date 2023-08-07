@@ -174,6 +174,7 @@ const Main = () => {
 
   const resetFormData = () => {
     setFormData(initialFormData);
+    setShowPopup(false);
   };
 
   return (
