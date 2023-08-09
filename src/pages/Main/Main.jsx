@@ -1,15 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, {useState } from "react";
 import axios from 'axios';
 import Popup from '../../components/Popup/Popup';
 import Profile from '../../components/Webcam/Profile';
 import example from './example.png';
 import person from './person.png';
 import './Main.css';
+import { useNavigate } from 'react-router-dom';
 
 const Main = () => {
+  
+  const navigate = useNavigate();
 
- 
- 
   const [formData, setFormData] = useState({
     name: '',
     sex: null,
@@ -107,7 +108,8 @@ const Main = () => {
 
     if(validationReturn){
       
-      setShowPopup(true);
+      navigate("/thank-you");
+       
       console.log(`handleValitation: ${handleValidation()}`);
 
     const { name, sex, yourImage, email, telegramTag } = formData;
@@ -123,7 +125,7 @@ const Main = () => {
     try {
       const response = await axios({
         method: "post",
-        url: 'http://104.248.26.55:7999/api/faces',
+        url: 'http://104.248.26.55:8000/api/faces',
         data: formDataToSend,
         headers: {
           "content-type": `multipart/form-data; boundary=${formDataToSend._boundary}`,
@@ -134,7 +136,7 @@ const Main = () => {
       console.log(idOfPhoto);
       axios({
         method: "put",
-        url: `http://104.248.26.55:7999/api/generate-random-image/${idOfPhoto}`,
+        url: `http://104.248.26.55:8000/api/generate-random-image/${idOfPhoto}`,
       })
         .then((res) => {
           console.log(res.statusText);
@@ -179,7 +181,7 @@ const Main = () => {
 
   return (
     <div>
-     
+    
       {showPopup && <Popup  resetFormData={resetFormData} />}
       <div className="main-container">
         {/* Upper Section */}
@@ -210,7 +212,7 @@ const Main = () => {
             <div>
               <img src={person} alt="Photo" id="upload-photo" />
               <label className="btn-photo" >
-                Chose photo from device <input type="file" onChange={handleChange} />
+                Chose photo from device <input type="file" accept="image/jpeg, image/jpg, image/png" onChange={handleChange} />
               </label>
             </div>
             
