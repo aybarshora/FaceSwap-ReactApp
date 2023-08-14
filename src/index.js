@@ -22,6 +22,10 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
  
   <React.StrictMode>
+    <head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' http: https:" />
+
+    </head>
 
     <RouterProvider router={router} />
 

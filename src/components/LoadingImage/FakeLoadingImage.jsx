@@ -6,7 +6,7 @@ function FakeLoadingImage({ imageUrl }) {
   useEffect(() => {
     const loadingTimeout = setTimeout(() => {
       setIsLoading(false); 
-    }, 120000); 
+    }, 10000); 
 
     return () => {
       clearTimeout(loadingTimeout); 
