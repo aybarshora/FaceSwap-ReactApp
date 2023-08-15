@@ -7,7 +7,7 @@ const ThankYou = () => {
         window.history.back();
       };
 
-      const imageUrl = "http://104.248.26.55:8000/media/images/processed_img1.jpg";
+      const imageUrl = "http://104.248.26.55/media/images/processed_img1.jpg";
       
 
   return (
