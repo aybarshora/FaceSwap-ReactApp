@@ -125,7 +125,7 @@ const Main = () => {
     try {
       const response = await axios({
         method: "post",
-        url: 'http://104.248.26.55/api/faces',
+        url: 'https://batyr-swap.duckdns.org/api/faces',
         data: formDataToSend,
         headers: {
           "content-type": `multipart/form-data; boundary=${formDataToSend._boundary}`,
@@ -136,7 +136,7 @@ const Main = () => {
       console.log(idOfPhoto);
       axios({
         method: "put",
-        url: `http://104.248.26.55/api/generate-random-image/${idOfPhoto}`,
+        url: `https://batyr-swap.duckdns.org/api/generate-random-image/${idOfPhoto}`,
       })
         .then((res) => {
           console.log(res.statusText);

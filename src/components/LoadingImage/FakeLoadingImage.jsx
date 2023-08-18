@@ -19,7 +19,7 @@ function FakeLoadingImage({ imageUrl }) {
       <img
         src={imageUrl}
         alt="Image"
-        style={{ display: isLoading ? 'none' : 'block' }}
+        style={{ display: isLoading ? 'none' : 'block', height: 300 }}
       />
     </div>
   );

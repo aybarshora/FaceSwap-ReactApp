@@ -7,18 +7,18 @@ const ThankYou = () => {
         window.history.back();
       };
 
-      const imageUrl = "http://104.248.26.55/media/images/processed_img1.jpg";
+      const imageUrl = "https://batyr-swap.duckdns.org/media/images/processed_img1.jpg";
       
 
   return (
     <div>  
         <div className="">
           <div className="">
-            <h2>Thank You!</h2>
-            <FakeLoadingImage imageUrl={imageUrl} />
-            <p>Your photo is being prepared</p>
-            <p>Your photo will be sent to your email</p>
-             <button onClick={handleStartOver}>Start Over</button>
+            <h2>Спасибо большое!</h2>
+            {/* <FakeLoadingImage imageUrl={imageUrl} /> */}
+            {/* <p>Your photo is being prepared</p> */}
+            <p>Ваша фотография была отправлена на вашу почту</p>
+             <button onClick={handleStartOver}>Начать заново</button>
           </div>
         </div>
  
