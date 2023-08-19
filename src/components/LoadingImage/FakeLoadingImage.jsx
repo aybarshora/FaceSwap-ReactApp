@@ -15,12 +15,12 @@ function FakeLoadingImage() {
   
     try {
       const response = await axios.get(apiUrl);
-      const conv_image = response.data.converted_image;
+      const conv_image = response.data.data.converted_image;
       console.log('Response:', conv_image);
-      if(conv_image === undefined){
+      if(conv_image == undefined){
         delayedFetchData();
       }else{
-        setImageSrc('https://batyr-swap.duckdns.org/' + conv_image);
+        setImageSrc('https://batyr-swap.duckdns.org' + conv_image);
       }
 
     } catch (error) {
@@ -34,7 +34,9 @@ function FakeLoadingImage() {
     }, 10000);
   }
 
-  delayedFetchData();
+  useEffect(() => {
+    fetchData();
+  }, [])
 
   return (
     <div>

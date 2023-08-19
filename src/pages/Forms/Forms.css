@@ -1,23 +1,22 @@
 @font-face {
-    font-family: 'Work Sans';
-    font-style: bold;
-    font-weight: 700;
-    src: url('../Main/WorkSans-Bold.ttf') format('ttf');
-  }
-  
-  @font-face {
-    font-family: 'Work Sans';
-    font-style: regular;
-    font-weight: 400;
-    src: url('../Main/WorkSans-Regular.ttf') format('ttf');
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #80C2FF;
-  }
+  font-family: 'Work Sans';
+  font-style: bold;
+  font-weight: 700;
+  src: url('../Main/WorkSans-Bold.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  font-style: regular;
+  font-weight: 400;
+  src: url('../Main/WorkSans-Regular.ttf') format('ttf');
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #80C2FF;
+}
   
   .main-container {
     max-width: 800px;
@@ -210,11 +209,11 @@
     color: white;
   }
   
-  .labels{
+  .labels {
     display: flex;
-    padding: 0%0 20px;
+    padding: 0% 0 20px;
     flex-wrap: wrap;
-    gap: 15;
+    gap: 15px;
     align-self: center;
   }
   
@@ -253,14 +252,15 @@
     color: white;
   }
   
+  
   .top, .bottom {
     background-color: #DDE7D8;
     padding: 20px;
   }
-  
-  .start-button{
+  .start-button {
     margin-left: 0;
   }
+  
   .top {
     align-self: flex-start;
   }
