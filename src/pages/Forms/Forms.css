@@ -257,6 +257,9 @@
     padding: 20px;
   }
   
+  .start-button{
+    margin-left: 0;
+  }
   .top {
     align-self: flex-start;
   }
