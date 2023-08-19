@@ -67,7 +67,7 @@
     align-items: center;
   }
   .body-of-profile{
-    margin-left: 230px;
+    margin-left: 40%;
   }
   .lower-section img { 
     max-width: 300px;
@@ -81,6 +81,7 @@
 
   .block-div{
     margin-top: 47px;
+    margin-right: 10%;
   }
   
   .lower-section input[type="file"] {
@@ -414,3 +415,10 @@
     color: #fff;
     font-family: 'Work Sans', sans-serif;
   }
+
+  @media (max-width: 990px) {
+    .block-div {
+      
+      margin-bottom: 10px; 
+  }
+}
