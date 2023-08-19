@@ -61,89 +61,7 @@ body {
   /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
 }
 
-.lower-section {
-  margin-top: 10%;
-  text-align: center;
-  display: block;
-}
 
-.lower-section img {
-
-  max-width: 300px;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  display: block;
-  margin: 0 auto;
-  transform: scaleX(-1);
-}
-
-.lower-section input[type="file"] {
-  display: none;
-}
-
-.lower-section label {
-  display: inline-block;
-  margin: 30px;
-  padding: 10px;
-  background-color: #fff;
-  color: #0066FF;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-
-.lower-section p {
-  font-size: 14px;
-  color: #fff;
-  margin-bottom: 20px;
-}
-
-.form-section {
-  display: flex;
-  flex-direction: column;
-  margin-top: 20px;
-}
-
-.form-section label {
-  display: block;
-  margin-bottom: 10px;
-  color: #fff;
-}
-
-.form-section input,
-.form-section select {
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #fff;
-  border-radius: 4px;
-  outline: none; /* Remove focus outline */
-}
-
-.form-section input[type="text"],
-.form-section input[type="email"],
-.form-section select {
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-.form-section button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 18px;
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 400;
-  color: #0066FF;
-  background-color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  outline: none;
-}
-
-.form-section button:hover {
-  background-color: #ccc;
-}
 
 /* Optional styles for better responsiveness */
 @media (max-width: 600px) {
@@ -171,81 +89,7 @@ body {
 /********/
 
 /* reset */
-input {
-  all: unset;
-}
 
-.LabelRoot {
-  font-size: 15px;
-  font-weight: 500;
-  line-height: 35px;
-  color: white;
-}
-
-.Input {
-  width: 200px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 4px;
-  padding: 0 10px;
-  height: 35px;
-  font-size: 15px;
-  line-height: 1;
-  color: white;
-  background-color: #71BEF6;
-  box-shadow: 0 0 0 1px var(--black-a9);
-}
-.Input:focus {
-  box-shadow: 0 0 0 2px wheat;
-}
-.Input::selection {
-  background-color: #71BEF6;
-  color: white;
-}
-
-.labels{
-  display: flex;
-  padding: 0%0 20px;
-  flex-wrap: wrap;
-  gap: 15;
-  align-self: center;
-}
-
-
-/* reset */
-input {
-  all: unset;
-}
-
-.LabelRoot {
-  font-size: 15px;
-  font-weight: 500;
-  line-height: 35px;
-  color: white;
-}
-
-.Input {
-  width: 200px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 4px;
-  padding: 0 10px;
-  height: 35px;
-  font-size: 15px;
-  line-height: 1;
-  color: white;
-  background-color: #71BEF6;
-  box-shadow: 0 0 0 1px var(--black-a9);
-}
-.Input:focus {
-  box-shadow: 0 0 0 2px white;
-}
-.Input::selection {
-  background-color: #71BEF6;
-  color: white;
-}
 
 .top, .bottom {
   background-color: #DDE7D8;
@@ -261,131 +105,6 @@ input {
   padding: 40px;
 }
 
-button {
-  padding: 8px 16px;
-  font-size: 16px;
-  color: #0066FF;
-  cursor: pointer;
-  border: 1px solid #fff;
-  border-radius: 4px;
-  background-color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-
-.submit-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  color: #fff;
-  background-color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  border-radius: 10px;
-}
-
-/* Hover effect */
-.submit-button:hover {
-  background-color: #ccc;
-  
-}
-
-/* Active effect */
-.submit-button:active {
-  background-color: #fff;
-}
-
-img{
-  border-radius: 70px;
-}
-
-.gender {
-  text-align: center;
-  margin: 20px;
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 200;
-  font-size: 20px;
-  color: #fff;
-
-}
-
-.button-container {
-  display: inline-block;
-}
-
-/* Styles for the buttons */
-.gender button {
-  color: #0066FF;
-  background-color: #fff;
-  font-size: 16px;
-  padding: 8px 16px;
-  margin: 4px;
-  font-family: 'Work Sans', sans-serif;
-}
-
-/* Styles for the active button */
-.gender button.active {
-  background-color: #0066FF;
-  color: #ffffff;
-}
-
-.form-container {
-  text-align: center;
-  margin: 20px; /* Optional: adjust margin as needed */
-}
-
-.form-section {
-  display: inline-block;
-  padding: 20px;
-}
-
-.form-group {
-  margin-bottom: 10px;
-}
-
-label {
-  display: block;
-  font-size: 5px;
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-  margin: 20px;
-  color: #fff;
-}
-
-input {
-  padding: 8px;
-  font-size: 14px;
-  width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background-color: #fff;
-}
-
-.submit-button {
-  background-color: #fff;
-  color: #0066FF;
-  padding: 10px 20px;
-  font-size: 16px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.submit-button:hover {
-  background-color: #fff;
-}
-
-.error-message {
-  color: red;
-  font-size: 0.85rem;
-  margin-top: 0.25rem;
-}
-
 .text-h2{
     font-family: 'Work Sans', sans-serif;
   font-weight: 700;
@@ -394,14 +113,36 @@ input {
   color: #fff;
 }
 
-.btn-photo:hover{
-  background-color: #ccc;
-}
-.btn-photo{
-font-size: 16px;
-}
-
 .text-main{
   color: #fff;
   font-family: 'Work Sans', sans-serif;
 }
+
+.start-button-con{
+  display: grid;
+  place-items: center;
+}
+
+.start-button {
+  display: inline-block;
+  padding: 20px 40px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.start-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* You can customize the hover effect and other properties as needed */
+

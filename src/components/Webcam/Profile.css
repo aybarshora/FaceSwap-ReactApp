@@ -11,24 +11,34 @@
     font-weight: 400;
     src: url('../../pages/Main/WorkSans-Regular.ttf') format('ttf');
   }
-  
 
-.text-main{
+  .ready-con{
+    margin-left: 0;
+  }
+  
+  .text-main{
     font-family: 'Work Sans', sans-serif;
   font-weight: 700;
   font-size: 30px;
-  margin: 20px;
   color: #CECECE;
 }
 
-
-
 .webcam {
     transform: scaleX(-1);
+    border-radius: 15px;
+    border: 5px solid #94d82d;
+  }
+
+  .webcam-ready{
+    transform: scaleX(-1);
+    border-radius: 15px;
+    border: 5px solid white;
+    margin-left: 0 !important;
   }
 
 button {
-    margin: 20px;
+    margin-left: 100px;
+    margin-top: 30px;
     padding: 10px 20px;
     font-size: 18px;
     color: #fff;

@@ -4,18 +4,16 @@ import FakeLoadingImage from '../../components/LoadingImage/FakeLoadingImage';
 const ThankYou = () => {
 
     const handleStartOver = () => {
-        window.history.back();
+      window.history.back();
+      window.history.back();
       };
-
-      const imageUrl = "https://batyr-swap.duckdns.org/media/images/processed_img1.jpg";
       
-
   return (
     <div>  
         <div className="">
           <div className="">
             <h2>Thank You!</h2>
-            <FakeLoadingImage imageUrl={imageUrl} />
+            <FakeLoadingImage  />
             <p>Your photo is being prepared</p>
             <p>Your photo will be sent to your email</p>
              <button onClick={handleStartOver}>Start Over</button>
