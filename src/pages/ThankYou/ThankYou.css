@@ -25,9 +25,9 @@
   
   /* Styles for the loading image */
   .inner-container img {
-   
+    max-width: 60%;
     height: auto;
-    margin: 20px auto;
+    margin: 5px auto;
   }
   
   /* Styles for the paragraphs */
@@ -61,7 +61,8 @@
   /* Optional: Media query for responsiveness */
   @media (max-width: 600px) {
     .inner-container {
-      max-width: 80%;
+      max-width: 90%;
+      
     }
   }
   
