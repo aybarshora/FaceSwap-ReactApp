@@ -58,26 +58,26 @@ const Forms = () => {
       const errors = {};
       
       if(!yourImage){
-        errors.yourImage = "You have to submit an image";
+        errors.yourImage = "Вам нужно отправить изображение.";
         isValid = false;
     
       }
   
       if (!name) {
-        errors.name = 'Name field cannot be empty';
+        errors.name = 'Поле имени не может быть пустым.';
         isValid = false;
       }
   
       if (!email) {
-        errors.email = 'Email field cannot be empty';
+        errors.email = 'Поле почта не может быть пустым.';
         isValid = false;
       } else if (!isValidEmail(email)) {
-        errors.email = 'Please enter a valid email address';
+        errors.email = 'Пожалуйста, введите корректный адрес электронной почты.';
         isValid = false;
       }
   
       if(!sex){
-        errors.sex = 'Representation field cannot be empty';
+        errors.sex = 'Поле представления не может быть пустым.';
         isValid = false;
       }
   
@@ -197,31 +197,31 @@ const Forms = () => {
         {/* Form Section */}
         <div className="gender">
         <label>
-          I want to be represented as:  
+        Я хочу быть представлен(а) как:  
           <div className="button-container">
             <button
               onClick={() => handleOptionChange(1)}
               className={formData.sex === 1 ? 'active' : ''}
             >
-              Man
+              Мужчина
             </button>
             <button
               onClick={() => handleOptionChange(2)}
               className={formData.sex === 2 ? 'active' : ''}
             >
-              Woman
+              Женщина
             </button>
             <button
               onClick={() => handleOptionChange(3)}
               className={formData.sex === 3 ? 'active' : ''}
             >
-              Boy
+              Мальчик
             </button>
             <button
               onClick={() => handleOptionChange(4)}
               className={formData.sex === 4 ? 'active' : ''}
             >
-              Girl
+              Девочка
             </button>
             
           </div>
@@ -233,7 +233,7 @@ const Forms = () => {
         <div className="form-container">
   <form onSubmit={handleSubmit} className='form-section' encType="multipart/form-data">
     <div className="form-group">
-      <label htmlFor="name">Name*</label>
+      <label htmlFor="name">Имя*</label>
       <input
         type="text"
         id="name"
@@ -244,7 +244,7 @@ const Forms = () => {
        
     </div>
     <div className="form-group">
-      <label htmlFor="email">Email*</label>
+      <label htmlFor="email">Почта*</label>
       <input
         type="email"
         id="email"
@@ -254,7 +254,7 @@ const Forms = () => {
        <span className="error-message">{formErrors.email}</span>
     </div>
     <button type="submit" className='submit-button'>
-      Submit
+    Отправить
     </button>
   </form>
 

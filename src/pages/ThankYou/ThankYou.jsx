@@ -13,10 +13,10 @@ const ThankYou = () => {
     <div>  
         <div className="outer-container">
           <div className="inner-container">
-            <h2  className="heading"  >Thank You!</h2>
+            <h2  className="heading"  >Спасибо!</h2>
             <FakeLoadingImage className="loading-image" alt="Loading Image"/>
-            <p>Your photo will be sent to your email</p>
-             <button onClick={handleStartOver} className="start-over-button" >Start Over</button>
+            <p>Ваше фото будет отправлено на вашу электронную почту.</p>
+             <button onClick={handleStartOver} className="start-over-button" >Начать заново</button>
           </div>
         </div>
  
