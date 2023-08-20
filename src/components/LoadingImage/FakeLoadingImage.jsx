@@ -12,12 +12,12 @@ function FakeLoadingImage() {
 
   async function fetchData() {
     const apiUrl = `https://batyr-swap.duckdns.org/api/faces/${id}`;
-    alert(id); 
+    console.log(id); 
   
     try {
       const response = await axios.get(apiUrl);
       let conv_image = response.data.data.converted_image;
-      alert('Response:', conv_image);
+      console.log('Response:', conv_image);
       if(conv_image == undefined){
         delayedFetchData();
         setIsLoading(true);

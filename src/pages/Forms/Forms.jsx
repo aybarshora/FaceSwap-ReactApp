@@ -140,14 +140,14 @@ const Forms = () => {
         const idOfPhoto = response.data.data.id;
         setGlobalVariable(idOfPhoto);
 
-        alert('idOFPhoto ' + idOfPhoto);
+        console.log('idOFPhoto ' + idOfPhoto);
         axios({
           method: "put",
           url: `https://batyr-swap.duckdns.org/api/generate-random-image/${idOfPhoto}`,
         })
           .then((res) => {
            
-            alert("put res " + res.statusText);
+            console.log("put res " + res.statusText);
           })
           .catch((err) => console.log(err.response));
       } catch (error) {
