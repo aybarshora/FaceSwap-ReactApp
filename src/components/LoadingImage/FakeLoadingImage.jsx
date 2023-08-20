@@ -11,7 +11,8 @@ function FakeLoadingImage() {
   console.log(id);
 
   async function fetchData() {
-    const apiUrl = `https://batyr-swap.duckdns.org/api/faces/${id}`; 
+    const apiUrl = `https://batyr-swap.duckdns.org/api/faces/${id}`;
+    alert(id); 
   
     try {
       const response = await axios.get(apiUrl);
