@@ -119,29 +119,26 @@ const Forms = () => {
           data: formDataToSend,
           headers: {
             "content-type": `multipart/form-data; boundary=${formDataToSend._boundary}`,
-        
           },
         });
-  
+      
         const idOfPhoto = response.data.data.id;
         setGlobalVariable(idOfPhoto);
-
-        console.log('idOFPhoto ' + idOfPhoto);
-        console.log('starting put req')
-        axios({
+      
+        console.log(idOfPhoto);
+      
+        const putResponse = await axios({
           method: "put",
           url: `https://batyr-swap.duckdns.org/api/generate-random-image/${idOfPhoto}`,
-        })
-          .then((res) => {  
-            console.log("put res " + res.statusText);
-          })
-          console.log('end put req')
-          .catch((err) => console.log(err.response));
+        });
+      
+        console.log(putResponse.statusText);
       } catch (error) {
         console.error('Error:', error);
       }
-      }
-    };
+    }
+  };
+      
   
     const handleReceiveData = (data) => {
       fetchImageAsBlob(data)
