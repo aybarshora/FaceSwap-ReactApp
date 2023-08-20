@@ -191,13 +191,12 @@ const Forms = () => {
     <div>  
       
       <div className="lower-section">
-        <Profile sendDataToParent={handleReceiveData} showPopup={showPopup} className="block-div" />
+        <Profile className="profile-div" sendDataToParent={handleReceiveData} showPopup={showPopup} />
        <div className="block-div">
        <h2 className="text-h2">Your image:</h2>
           {formData.yourImage ? (
             <div >
-           
-              <img src={formData.imageForView} alt="Photo" id="upload-photo" />
+              <img src={formData.imageForView} alt="Photo" id="upload-photo" className="img-after" />
               <label className="btn-photo">
                 Chose another photo from device<input type="file" onChange={handleChange} /> </label>
              

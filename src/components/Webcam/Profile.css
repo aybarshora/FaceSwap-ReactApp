@@ -12,8 +12,14 @@
     src: url('../../pages/Main/WorkSans-Regular.ttf') format('ttf');
   }
 
+
   .ready-con{
     margin-left: 0;
+  }
+
+  .body-of-profile{
+    margin-left: 70%;
+    margin-bottom: 10%;
   }
   
   .text-main{
@@ -21,6 +27,11 @@
   font-weight: 700;
   font-size: 30px;
   color: #CECECE;
+  text-align: center;
+  width: 300px;
+  margin-top: 31px;
+    margin-bottom: 19px;
+
 }
 
 .webcam {
@@ -42,13 +53,19 @@ button {
     padding: 10px 20px;
     font-size: 18px;
     color: #fff;
-    background-color: #596454;
+    background-color: #fff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    outline: none; /* Remove focus outline */
+    outline: none; 
   }
   
 button:hover {
-    background-color: #71BEF6;
+    background-color: #ccc;
+}
+
+@media (max-width: 1300px) {
+  .body-of-profile {
+    margin-left: 30%;
+}
 }

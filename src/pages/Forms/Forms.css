@@ -24,12 +24,7 @@ body {
     padding: 20px;
     border-radius: 8px;
   }
-  
-  .upper-section {
-    display: flex;
-    align-items: center;
-    margin-bottom: 30px;
-  }
+
   
   .left-side {
     flex: 1;
@@ -57,17 +52,18 @@ body {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    
   }
   
   .lower-section {
     display: flex;
-    justify-content: space-between; /* Distributes content evenly along the row */
-    align-items: center;
+    justify-content: space-between; 
   }
+
   .body-of-profile{
-    margin-left: 40%;
+    width: 500px;
   }
+
   .lower-section img { 
     max-width: 300px;
     height: auto;
@@ -78,9 +74,15 @@ body {
     transform: scaleX(-1);
   }
 
+  .img-after{
+    border-radius: 15px;
+    border: 5px solid white;
+  }
+
   .block-div{
-    margin-top: 47px;
-    margin-right: 10%;
+    margin-top: 44px;
+    width: 300px;
+    text-align: center; 
   }
   
   .lower-section input[type="file"] {
@@ -261,14 +263,6 @@ body {
     margin-left: 0;
   }
   
-  .top {
-    align-self: flex-start;
-  }
-  
-  .bottom {
-    align-self: flex-end;
-    padding: 40px;
-  }
   
   button {
     padding: 8px 16px;
@@ -397,11 +391,12 @@ body {
   }
   
   .text-h2{
-      font-family: 'Work Sans', sans-serif;
+    font-family: 'Work Sans', sans-serif;
     font-weight: 700;
     font-size: 30px;
     margin: 20px;
     color: #fff;
+    text-align: center;
   }
   
   .btn-photo:hover{
@@ -409,6 +404,7 @@ body {
   }
   .btn-photo{
   font-size: 16px;
+  text-align: center;
   }
   
   .text-main{
@@ -416,9 +412,13 @@ body {
     font-family: 'Work Sans', sans-serif;
   }
 
-  @media (max-width: 990px) {
-    .block-div {
-      
-      margin-bottom: 10px; 
+  @media (max-width: 800px) { 
+    .lower-section {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .body-of-profile{
+      margin-left: 20%;
+    }
   }
-}
