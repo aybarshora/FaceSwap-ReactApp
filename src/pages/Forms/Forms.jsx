@@ -146,7 +146,8 @@ const Forms = () => {
           url: `https://batyr-swap.duckdns.org/api/generate-random-image/${idOfPhoto}`,
         })
           .then((res) => {
-            alert(res.statusText);
+           
+            alert("put" + res.statusText);
           })
           .catch((err) => console.log(err.response));
       } catch (error) {
