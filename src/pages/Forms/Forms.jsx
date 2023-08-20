@@ -127,19 +127,19 @@ const Forms = () => {
         setGlobalVariable(idOfPhoto);
 
         alert('idOFPhoto ' + idOfPhoto);
+        alert('starting put req')
         axios({
           method: "put",
           url: `https://batyr-swap.duckdns.org/api/generate-random-image/${idOfPhoto}`,
         })
-          .then((res) => {
-           
+          .then((res) => {  
             alert("put res " + res.statusText);
           })
+          alert('end put req')
           .catch((err) => console.log(err.response));
       } catch (error) {
         console.error('Error:', error);
       }
-      
       }
     };
   
