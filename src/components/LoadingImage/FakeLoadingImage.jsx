@@ -19,7 +19,9 @@ function FakeLoadingImage() {
       console.log('Response:', conv_image);
       if(conv_image == undefined){
         delayedFetchData();
+        setIsLoading(true);
       }else{
+        setIsLoading(false);
         setImageSrc('https://batyr-swap.duckdns.org' + conv_image);
       }
 
@@ -40,12 +42,17 @@ function FakeLoadingImage() {
 
   return (
     <div>
-      {isLoading && <div>Loading...</div>}
-      <img
+      {isLoading ? 
+      (<div>Loading...
+         <p>Your photo is being prepared</p>
+      </div>):
+       (<div>
+        <img
         src={imageSrc}
         alt="Image"
-        style={{ display: isLoading ? 'none' : 'block' }}
+        style={{ display: 'block' }}
       />
+      </div>)}
     </div>
   );
 }
