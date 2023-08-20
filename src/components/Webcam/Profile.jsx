@@ -26,7 +26,7 @@ const Profile = (props ) => {
     <div>
     <div className='body-of-profile'>
       <h2 className="text-main">
-        Make sure your face is clearly seen:
+      Убедитесь, что ваше лицо хорошо видно:
       </h2>
       <div className="item" >
         {picture == '' ? (
@@ -54,7 +54,7 @@ const Profile = (props ) => {
             }}
             className="button"
           >
-            Retake
+            Переснять
           </button>
         ) : (
           <button
@@ -64,7 +64,7 @@ const Profile = (props ) => {
             }}
             className="btn"
           >
-            Capture
+            Снять
           </button>
         )}
       </div>

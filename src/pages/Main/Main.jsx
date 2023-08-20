@@ -20,15 +20,15 @@ const Main = () => {
         {/* Upper Section */}
         <div className="upper-section">
           <div className="left-side">
-            <h1>Turn yourself into a real hero!</h1>
-            <p>A fun project that uses AI to make you into a hero.</p>
+            <h1>Сделайте себя настоящим героем!</h1>
+            <p>Забавный проект, использующий искусственный интеллект, чтобы превратить вас в героя. </p>
           </div>
           <div className="right-side">
             <img src={example} alt="Hero Image" />
           </div>
         </div>
         <div className="start-button-con" >
-        <button onClick={startButton} className='start-button'>Start</button>
+        <button onClick={startButton} className='start-button'>Начать</button>
         </div>
         </div>
     </div>

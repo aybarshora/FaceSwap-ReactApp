@@ -25,16 +25,7 @@ const Forms = () => {
       imageForView: null,
     });
   
-    const initialFormData = {
-      name: '',
-      sex: null,
-      yourImage: '',
-      chosenImage: null,
-      email: '',
-      telegramTag: '',
-      imageForView: null,
-    };
-  
+    
     const [showPopup, setShowPopup] = useState(false);
   
     const handleOptionChange = (option) => {
@@ -58,12 +49,11 @@ const Forms = () => {
       name: '',
       email: '',
       sex: '',
-      telegramTag: '',
       yourImage: ''
     });
   
     const handleValidation = () => {
-      const { name, email, sex, telegramTag, yourImage } = formData;
+      const { name, email, sex, yourImage } = formData;
       let isValid = true;
       const errors = {};
       
@@ -91,10 +81,7 @@ const Forms = () => {
         isValid = false;
       }
   
-      if(!telegramTag){
-        errors.telegramTag ='Telegram Tag field cannot be empty';
-        isValid = false;
-      }
+      
       setFormErrors(errors);
       return isValid;
     };
@@ -116,7 +103,7 @@ const Forms = () => {
          
         console.log(`handleValitation: ${handleValidation()}`);
   
-      const { name, sex, yourImage, email, telegramTag } = formData;
+      const { name, sex, yourImage, email } = formData;
   
       const formDataToSend = new FormData();
       formDataToSend.append('id', null);
@@ -124,7 +111,6 @@ const Forms = () => {
       formDataToSend.append('sex', sex);
       formDataToSend.append('your_image', yourImage);
       formDataToSend.append('email', email);
-      formDataToSend.append('telegram_tag', telegramTag);
   
       try {
         const response = await axios({
@@ -182,8 +168,6 @@ const Forms = () => {
       });
     };
   
-   
-
 
   return (
     <div>  
@@ -191,19 +175,18 @@ const Forms = () => {
       <div className="lower-section">
         <Profile className="profile-div" sendDataToParent={handleReceiveData} showPopup={showPopup} />
        <div className="block-div">
-       <h2 className="text-h2">Your image:</h2>
+       <h2 className="text-h2">Ваше фото:</h2>
           {formData.yourImage ? (
             <div >
               <img src={formData.imageForView} alt="Photo" id="upload-photo" className="img-after" />
               <label className="btn-photo">
-                Chose another photo from device<input type="file" onChange={handleChange} /> </label>
-             
+                Выбрать фото с устройства<input type="file" accept="image/jpeg, image/jpg, image/png" onChange={handleChange} /> </label>
             </div>
           ) : (
             <div className="block-div">
               <img src={person} alt="Photo" id="upload-photo" />
               <label className="btn-photo" >
-                Chose photo from device <input type="file" accept="image/jpeg, image/jpg, image/png" onChange={handleChange} />
+              Выбрать фото с устройства  <input type="file" accept="image/jpeg, image/jpg, image/png" onChange={handleChange} />
               </label>
             </div>
             
@@ -269,16 +252,6 @@ const Forms = () => {
         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
       />
        <span className="error-message">{formErrors.email}</span>
-    </div>
-    <div className="form-group">
-      <label htmlFor="telegramTag">Telegram Tag*</label>
-      <input
-        type="text"
-        id="telegramTag"
-        value={formData.telegramTag}
-        onChange={(e) => setFormData({ ...formData, telegramTag: e.target.value })}
-      />
-       <span className="error-message">{formErrors.telegramTag}</span>
     </div>
     <button type="submit" className='submit-button'>
       Submit
