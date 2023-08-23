@@ -1,26 +1,62 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { useGlobalContext } from '../../components/GlobalVariable/GlobalProvider';
 
-function FakeLoadingImage({ imageUrl }) {
+function FakeLoadingImage() {
+  const { globalVariable, setGlobalVariable } = useGlobalContext();
   const [isLoading, setIsLoading] = useState(true);
+  const [imageSrc, setImageSrc] = useState('');
 
-  useEffect(() => {
-    const loadingTimeout = setTimeout(() => {
-      setIsLoading(false); 
-    }, 10000); 
+  const id = globalVariable; 
+  console.log(id);
 
-    return () => {
-      clearTimeout(loadingTimeout); 
-    };
-  }, []);
+  async function fetchData() {
+    const apiUrl = `https://batyr-swap.duckdns.org/api/faces/${id}`;
+    console.log(id); 
+  
+    try {
+      const response = await axios.get(apiUrl);
+      let conv_image = response.data.data.converted_image;
+      console.log('Response:' + conv_image);
+      if(conv_image == undefined){
+        delayedFetchData();
+        setIsLoading(true);
+      }else{
+        setIsLoading(false);
+        setImageSrc('https://batyr-swap.duckdns.org' + conv_image);
+        conv_image = '';
+      }
+
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  }
+  
+  function delayedFetchData() {
+    setTimeout( () => {
+      fetchData();
+    }, 10000);
+  }
+
+    fetchData();
 
   return (
     <div>
-      {isLoading && <div>Loading...</div>}
-      <img
-        src={imageUrl}
+      {isLoading ? 
+      (<div>Загрузка...
+         <p>Ваше фото готовится</p>
+      </div>):
+       (<div>
+        <img
+        src={imageSrc}
         alt="Image"
+<<<<<<< HEAD
         style={{ display: isLoading ? 'none' : 'block', height: 300 }}
+=======
+        style={{ display: 'block' }}
+>>>>>>> f58f25ad9f69eabbc52c4506242651e1b902a2c1
       />
+      </div>)}
     </div>
   );
 }

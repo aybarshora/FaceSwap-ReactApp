@@ -24,10 +24,11 @@ const Profile = (props ) => {
   })
   return (
     <div>
+    <div className='body-of-profile'>
       <h2 className="text-main">
-        Make sure your face is clearly seen:
+      Убедитесь, что ваше лицо хорошо видно:
       </h2>
-      <div>
+      <div className="item" >
         {picture == '' ? (
           <Webcam
             audio={false}
@@ -39,19 +40,21 @@ const Profile = (props ) => {
             className='webcam'
           />
         ) : (
-          <img src={picture} />
+          <div className='ready-con'>
+          <img src={picture} className='webcam-ready'/>
+          </div>
         )}
       </div>
-      <div>
+      <div className="item">
         {picture != '' ? (
           <button
             onClick={(e) => {
               e.preventDefault()
               setPicture('')
             }}
-            className="btn"
+            className="button"
           >
-            Retake
+            Переснять
           </button>
         ) : (
           <button
@@ -61,10 +64,11 @@ const Profile = (props ) => {
             }}
             className="btn"
           >
-            Capture
+            Снять
           </button>
         )}
       </div>
+    </div>
     </div>
   )
 }
