@@ -11,7 +11,7 @@ function FakeLoadingImage() {
   console.log(id);
 
   async function fetchData() {
-    const apiUrl = `https://batyr-swap.duckdns.org/api/fac/${id}`;
+    const apiUrl = `https://batyr-swap.duckdns.org/api/faces/${id}`;
     console.log(id); 
   
     try {
