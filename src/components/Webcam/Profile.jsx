@@ -29,7 +29,7 @@ const Profile = (props ) => {
       Убедитесь, что ваше лицо хорошо видно:
       </h2>
       <div className="item" >
-        {picture == '' ? (
+        {picture === '' ? (
           <Webcam
             audio={false}
             height={300}
@@ -46,7 +46,7 @@ const Profile = (props ) => {
         )}
       </div>
       <div className="item">
-        {picture != '' ? (
+        {picture !== '' ? (
           <button
             onClick={(e) => {
               e.preventDefault()
