@@ -16,7 +16,7 @@ const Main = () => {
   return (
     <div>
     
-      
+    
       <div className="main-container">
         {/* Upper Section */}
         <div className="upper-section">
