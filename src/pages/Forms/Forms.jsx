@@ -124,15 +124,15 @@ const Forms = () => {
       
         const idOfPhoto = response.data.data.id;
         setGlobalVariable(idOfPhoto);
-      
-        console.log(idOfPhoto);
-      
+        console.log("Photo uploaded with ID:", idOfPhoto);
+
         const putResponse = await axios({
           method: "put",
           url: `https://batyr-swap.duckdns.org/api/generate-random-image/${idOfPhoto}`,
         });
+    
+        console.log("PUT request status:", putResponse.statusText);
       
-        console.log(putResponse.statusText);
       } catch (error) {
         console.error('Error:', error);
       }
