@@ -1,4 +1,4 @@
-import React, {useState } from "react";
+import React, {useEffect, useState } from "react";
 import axios from 'axios';
 import Popup from '../../components/Popup/Popup';
 import Profile from '../../components/Webcam/Profile';
@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import person from '../Main/person.png';
 import './Forms.css'
 import { useGlobalContext } from '../../components/GlobalVariable/GlobalProvider';
+import { logging } from "../../services/loggingService";
 
 
 const Forms = () => {
@@ -27,7 +28,7 @@ const Forms = () => {
   
     
     const [showPopup, setShowPopup] = useState(false);
-  
+    
     const handleOptionChange = (option) => {
   
       setFormData({ ...formData, sex: option });
@@ -135,6 +136,7 @@ const Forms = () => {
       
       } catch (error) {
         console.error('Error:', error);
+        logging(error);
       }
     }
   };
@@ -157,6 +159,7 @@ const Forms = () => {
     };
   
     const handleChange = (e) => {
+      logging("test");
       const imageFile = e.target.files[0];
       setFormData({
         ...formData,
