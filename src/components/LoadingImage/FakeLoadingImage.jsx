@@ -23,7 +23,7 @@ function FakeLoadingImage() {
         setIsLoading(true);
       }else {
         setIsLoading(false);
-        setImageSrc('https://batyr-swap.duckdns.or' + conv_image);
+        setImageSrc('https://batyr-swap.duckdns.org' + conv_image);
         conv_image = '';
       }
 
