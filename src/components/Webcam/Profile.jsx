@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Webcam from 'react-webcam'
 import './Profile.css'
+import { logging } from "../../services/loggingService";
 const WebcamComponent = () => <Webcam />
 const videoConstraints = {
   width: 300,
