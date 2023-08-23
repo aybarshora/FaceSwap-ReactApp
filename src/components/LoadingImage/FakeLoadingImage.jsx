@@ -50,11 +50,7 @@ function FakeLoadingImage() {
         <img
         src={imageSrc}
         alt="Image"
-<<<<<<< HEAD
-        style={{ display: isLoading ? 'none' : 'block', height: 300 }}
-=======
         style={{ display: 'block' }}
->>>>>>> f58f25ad9f69eabbc52c4506242651e1b902a2c1
       />
       </div>)}
     </div>
