@@ -18,10 +18,10 @@ function FakeLoadingImage() {
       const response = await axios.get(apiUrl);
       let conv_image = response.data.data.converted_image;
       console.log('Response:' + conv_image);
-      if(conv_image == undefined){
+      if(!conv_image){
         delayedFetchData();
         setIsLoading(true);
-      }else{
+      }else {
         setIsLoading(false);
         setImageSrc('https://batyr-swap.duckdns.org' + conv_image);
         conv_image = '';
