@@ -20,12 +20,13 @@
   .body-of-profile{
     margin-left: 70%;
     margin-bottom: 10%;
+    margin-top: 13%;
   }
   
   .text-main{
     font-family: 'Work Sans', sans-serif;
-  font-weight: 700;
-  font-size: 30px;
+  font-weight: 400;
+  font-size: 20px;
   color: #CECECE;
   text-align: center;
   width: 300px;

@@ -43,8 +43,9 @@ function FakeLoadingImage() {
   return (
     <div>
       {isLoading ? 
-      (<div>Загрузка...
+      (<div>...
          <p>Ваше фото готовится</p>
+         <p>Это может занять несколько минут</p>
       </div>):
        (<div>
         <img

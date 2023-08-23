@@ -26,7 +26,7 @@ const Profile = (props ) => {
     <div>
     <div className='body-of-profile'>
       <h2 className="text-main">
-      Убедитесь, что ваше лицо хорошо видно:
+      Смотрите прямо в камеру, без очков или других аксессуаров для глаз:
       </h2>
       <div className="item" >
         {picture === '' ? (
