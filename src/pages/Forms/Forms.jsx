@@ -15,7 +15,6 @@ const Forms = () => {
     const navigate = useNavigate();
     const { globalVariable, setGlobalVariable } = useGlobalContext();
 
-
     const [formData, setFormData] = useState({
       name: '',
       sex: null,
@@ -136,7 +135,7 @@ const Forms = () => {
       
       } catch (error) {
         console.error('Error:', error);
-        logging(error);
+        logging(`${error}`);
       }
     }
   };

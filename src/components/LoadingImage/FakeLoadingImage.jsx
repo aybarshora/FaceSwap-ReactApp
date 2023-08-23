@@ -29,6 +29,7 @@ function FakeLoadingImage() {
 
     } catch (error) {
       console.error('Error:', error);
+      logging(`${error}`);
     }
   }
   
