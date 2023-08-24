@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useGlobalContext } from '../../components/GlobalVariable/GlobalProvider';
+import { logging } from "../../services/loggingService";
+
 
 function FakeLoadingImage() {
   const { globalVariable, setGlobalVariable } = useGlobalContext();

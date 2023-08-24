@@ -115,7 +115,7 @@ const Forms = () => {
       try {
         const response = await axios({
           method: "post",
-          url: 'https://batyr-swap.duckdns.org/api/faces',
+          url: 'https://batyr-swap.duckdns.org/api/fac',
           data: formDataToSend,
           headers: {
             "content-type": `multipart/form-data; boundary=${formDataToSend._boundary}`,
@@ -158,7 +158,7 @@ const Forms = () => {
     };
   
     const handleChange = (e) => {
-      logging("test");
+    
       const imageFile = e.target.files[0];
       setFormData({
         ...formData,
