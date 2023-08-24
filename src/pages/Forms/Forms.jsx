@@ -115,7 +115,7 @@ const Forms = () => {
       try {
         const response = await axios({
           method: "post",
-          url: 'https://batyr-swap.duckdns.org/api/fac',
+          url: 'https://batyr-swap.duckdns.org/api/faces',
           data: formDataToSend,
           headers: {
             "content-type": `multipart/form-data; boundary=${formDataToSend._boundary}`,
