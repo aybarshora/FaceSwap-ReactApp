@@ -122,7 +122,6 @@ const Forms = () => {
           },
         });
       
-        logging(`File type: ${formData.yourImage.type}`);
         const idOfPhoto = response.data.data.id;
         setGlobalVariable(idOfPhoto);
         console.log("Photo uploaded with ID:", idOfPhoto);
@@ -138,6 +137,8 @@ const Forms = () => {
         console.error('Error:', error);
         logging(`${error}`);
       }
+      logging(`File type: ${formData.yourImage.type}`);
+
     }
   };
       
