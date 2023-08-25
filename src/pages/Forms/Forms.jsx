@@ -124,7 +124,6 @@ const Forms = () => {
       
         const idOfPhoto = response.data.data.id;
         setGlobalVariable(idOfPhoto);
-        logging(`File type: ${formData.yourImage.type}`);
         console.log("Photo uploaded with ID:", idOfPhoto);
 
         const putResponse = await axios({
@@ -138,6 +137,8 @@ const Forms = () => {
         console.error('Error:', error);
         logging(`${error}`);
       }
+
+      logging(`File type: ${formData.yourImage.type}`);
     }
   };
       
