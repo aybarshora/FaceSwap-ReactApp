@@ -1,6 +1,5 @@
 import React, {useEffect, useState } from "react";
 import axios from 'axios';
-import Popup from '../../components/Popup/Popup';
 import Profile from '../../components/Webcam/Profile';
 import '../Main/Main.css'
 import { useNavigate } from 'react-router-dom';
@@ -127,6 +126,7 @@ const Forms = () => {
         console.log("Photo uploaded with ID:", idOfPhoto);
         logging(`File type: ${formData.yourImage.type}`);
 
+
         const putResponse = await axios({
           method: "put",
           url: `https://batyr-swap.duckdns.org/api/generate-random-image/${idOfPhoto}`,
@@ -151,17 +151,16 @@ const Forms = () => {
           setFormData({
             ...formData,
             yourImage: file,
-            imageForView: URL.createObjectURL(file),
-            chosenImage: file,
+            imageForView: URL.createObjectURL(file)
           });
         })
         .catch((error) => {
           console.log('Error:', error);
+          logging(`${error}`);
         });
     };
   
     const handleChange = (e) => {
-    
       const imageFile = e.target.files[0];
       setFormData({
         ...formData,

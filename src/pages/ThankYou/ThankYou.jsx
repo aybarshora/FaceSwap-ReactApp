@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import FakeLoadingImage from '../../components/LoadingImage/FakeLoadingImage';
-import './ThankYou.css'ж
+import './ThankYou.css'
 import { useGlobalContext } from '../../components/GlobalVariable/GlobalProvider';
 
 
