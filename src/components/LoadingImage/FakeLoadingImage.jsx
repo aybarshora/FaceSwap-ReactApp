@@ -41,7 +41,9 @@ function FakeLoadingImage() {
     }, 10000);
   }
 
-    fetchData();
+    useEffect(() => {
+      fetchData();
+    }, [])
 
   return (
     <div>

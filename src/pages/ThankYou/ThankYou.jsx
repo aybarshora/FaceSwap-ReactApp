@@ -9,9 +9,8 @@ const ThankYou = () => {
 
 
     const handleStartOver = () => {
-      window.history.back();
-      window.history.back();
       setGlobalVariable('');
+      window.location.href = 'https://midjorney.web.app/';
       };
       
   return (
