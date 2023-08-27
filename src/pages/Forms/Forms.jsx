@@ -7,7 +7,7 @@ import person from '../Main/person.png';
 import './Forms.css'
 import { useGlobalContext } from '../../components/GlobalVariable/GlobalProvider';
 import { logging } from "../../services/loggingService";
-
+import imageConversion from 'image-conversion';
 
 
 const Forms = () => {
