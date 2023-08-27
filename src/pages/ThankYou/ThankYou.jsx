@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
 import FakeLoadingImage from '../../components/LoadingImage/FakeLoadingImage';
 import './ThankYou.css'
+import { useGlobalContext } from '../../components/GlobalVariable/GlobalProvider';
+
 
 const ThankYou = () => {
+  const { globalVariable, setGlobalVariable } = useGlobalContext();
+
 
     const handleStartOver = () => {
       window.history.back();
       window.history.back();
+      setGlobalVariable('');
       };
       
   return (
