@@ -1,9 +1,7 @@
 import React, {useState } from "react";
-import Popup from '../../components/Popup/Popup';
 import example from './example.png';
 import './Main.css';
 import { useNavigate } from 'react-router-dom';
-import { logging } from "../../services/loggingService";
 
 const Main = () => {
   

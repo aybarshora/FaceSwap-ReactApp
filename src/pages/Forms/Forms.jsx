@@ -77,7 +77,7 @@ const Forms = () => {
       }
   
       if(!sex){
-        errors.sex = 'Поле представления не может быть пустым.';
+        errors.sex = 'Выберите пол пожалуйста!';
         isValid = false;
       }
   
@@ -147,6 +147,7 @@ const Forms = () => {
       fetchImageAsBlob(data)
         .then((blob) => {
           const file = blobToFile(blob, fileName);
+          console.log("file: ", file);
           setFormData({
             ...formData,
             yourImage: file,
@@ -162,6 +163,8 @@ const Forms = () => {
     const handleChange = (e) => {
     
       const imageFile = e.target.files[0];
+      console.log("imageFile: ", imageFile);
+
       setFormData({
         ...formData,
         imageForView: URL.createObjectURL(imageFile),
