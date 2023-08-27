@@ -9,6 +9,7 @@ import { useGlobalContext } from '../../components/GlobalVariable/GlobalProvider
 import { logging } from "../../services/loggingService";
 
 
+
 const Forms = () => {
 
     const navigate = useNavigate();
@@ -163,15 +164,30 @@ const Forms = () => {
   
     const handleChange = (e) => {
       const imageFile = e.target.files[0];
-      console.log("imageFile: ", imageFile);
-
-      setFormData({
-        ...formData,
-        imageForView: URL.createObjectURL(imageFile),
-        yourImage: imageFile,
-      });
+      try {
+        const compressedFile = compressImage(imageFile);
+        console.log('Compressed image:', compressedFile);
+        
+        setFormData({
+          ...formData,
+          imageForView: URL.createObjectURL(imageFile),
+          yourImage: compressedFile,
+        });
+      } catch (error) {
+        console.error('Image compression error:', error);
+      }
+      
     };
+
+    const compressImage = async (imageFile) => {
+      const targetSizeInBytes = 1 * 1024 * 1024; // 1MB 
   
+      const compressedFile = await imageConversion.compressAccurately(imageFile, {
+        size: targetSizeInBytes,
+      });
+  
+      return compressedFile;
+    };
 
   return (
     <div>  
