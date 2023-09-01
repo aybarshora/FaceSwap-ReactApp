@@ -12,26 +12,27 @@
     src: url('../../pages/Main/WorkSans-Regular.ttf') format('ttf');
   }
 
-
-  .ready-con{
-    margin-left: 0;
+  .text-profile{
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 20px;
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 60px;
+    width: 100%;
+    padding: 10px;
   }
 
-  .body-of-profile{
-    margin-left: 70%;
-    margin-bottom: 10%;
-    margin-top: 13%;
-  }
-  
   .text-main{
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 400;
   font-size: 20px;
   color: #CECECE;
   text-align: center;
   width: 300px;
   margin-top: 31px;
-    margin-bottom: 19px;
+  margin-bottom: 19px;
 
 }
 
@@ -43,14 +44,21 @@
 
   .webcam-ready{
     transform: scaleX(-1);
+  }
+
+  .ready-con{
+ 
     border-radius: 15px;
     border: 5px solid white;
-    margin-left: 0 !important;
+  }
+
+  .item{
+    position: relative;
   }
 
 button {
-    margin-left: 100px;
-    margin-top: 30px;
+    margin-left: 125px;
+    margin-top: 50px;
     padding: 10px 20px;
     font-size: 18px;
     color: #fff;
@@ -62,11 +70,6 @@ button {
   }
   
 button:hover {
-    background-color: #ccc;
-}
-
-@media (max-width: 1300px) {
-  .body-of-profile {
-    margin-left: 30%;
-}
+  background-color: #2bfefe;
+  transform: scale(1.05);
 }

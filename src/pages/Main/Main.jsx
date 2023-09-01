@@ -19,11 +19,11 @@ const Main = () => {
         {/* Upper Section */}
         <div className="upper-section">
           <div className="left-side">
-            <h1>Сделайте себя настоящим героем!</h1>
-            <p>Забавный проект, использующий искусственный интеллект, чтобы превратить вас в героя. </p>
+            <div className="main-text">Почувствуй себя сарматом</div>
+  
           </div>
           <div className="right-side">
-            <img src={example} alt="Hero Image" />
+            <img src={example} alt="Hero Image" className="image-example" />
           </div>
         </div>
         <div className="start-button-con" >

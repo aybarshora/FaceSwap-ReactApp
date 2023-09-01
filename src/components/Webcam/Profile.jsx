@@ -26,9 +26,7 @@ const Profile = (props ) => {
   return (
     <div>
     <div className='body-of-profile'>
-      <h2 className="text-main">
-      Смотрите прямо в камеру, без очков или других аксессуаров для глаз:
-      </h2>
+    <div className="text-main">Смотрите прямо в камеру, без очков или других аксессуаров для глаз:    </div>
       <div className="item" >
         {picture === '' ? (
           <Webcam
@@ -48,25 +46,29 @@ const Profile = (props ) => {
       </div>
       <div className="item">
         {picture !== '' ? (
+          <div>
+            <div className='text-profile'>Переснять фото:</div>
           <button
             onClick={(e) => {
               e.preventDefault()
               setPicture('')
             }}
-            className="button"
           >
-            Переснять
+             <img width="25" height="25" src="https://img.icons8.com/ios/50/camera--v3.png" alt="camera--v3"/>
           </button>
+          </div>
         ) : (
+          <div>
+             <div className='text-profile'>Сделать фото:</div>
           <button
             onClick={(e) => {
               e.preventDefault()
               capture()
-            }}
-            className="btn"
+            }}  
           >
-            Снять
+            <img width="25" height="25" src="https://img.icons8.com/ios/50/camera--v3.png" alt="camera--v3"/>
           </button>
+          </div>
         )}
       </div>
     </div>

@@ -1,15 +1,32 @@
 /* Styles for the outer container */
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('../Main/bg.png');
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  width: 100vw; 
+  height: 100vh;
+}
+
+
 .outer-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #80C2FF;
-  }
+  width: 100vw; 
+  height: 100vh;
+  background-image: url('../Main/bg.png');
+  background-size:cover; 
+  background-repeat: no-repeat; 
+  max-width: 800px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  display: grid;
+  place-items: center;
+}
+
   
   /* Styles for the inner container */
   .inner-container {
-    background-color: #ffffff;
+    background-color: #D9D9D9;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;

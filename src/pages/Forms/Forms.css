@@ -11,21 +11,21 @@
   font-weight: 400;
   src: url('../Main/WorkSans-Regular.ttf') format('ttf');
 }
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #80C2FF;
-}
-  
-  .main-container {
-    max-width: 800px;
-    margin: 8% auto;
-    padding: 20px;
-    border-radius: 8px;
-  }
 
-  
+ .main-div{
+  width: 100vw; 
+  height: 100vh;
+  overflow-x: hidden;
+  background-image: url('../Main/bg.png');
+  background-size:cover; 
+  background-repeat: no-repeat; 
+  max-width: 700px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  display: grid;
+  place-items: center;
+ }
+
   .left-side {
     flex: 1;
     padding: 20px;
@@ -48,21 +48,8 @@ body {
     margin: 10px 0;
   }
   
-  .right-side img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    
-  }
+ 
   
-  .lower-section {
-    display: flex;
-    justify-content: space-between; 
-  }
-
-  .body-of-profile{
-    width: 500px;
-  }
 
   .lower-section img { 
     max-width: 300px;
@@ -90,6 +77,7 @@ body {
   }
   
   .lower-section label {
+    
     display: inline-block;
     margin: 30px;
     padding: 10px;
@@ -140,7 +128,7 @@ body {
     font-size: 18px;
     font-family: 'Work Sans', sans-serif;
     font-weight: 400;
-    color: #0066FF;
+    color: #090909;
     background-color: #fff;
     border: none;
     border-radius: 4px;
@@ -152,28 +140,7 @@ body {
     background-color: #ccc;
   }
   
-  /* Optional styles for better responsiveness */
-  @media (max-width: 600px) {
-    .main-container {
-      padding: 10px;
-    }
   
-    .left-side h1 {
-      font-size: 24px;
-    }
-  
-    .left-side p {
-      font-size: 14px;
-    }
-  
-    .right-side img {
-      border-radius: 6px;
-    }
-  
-
-  }
-  
-  /********/
   
   /* reset */
   input {
@@ -321,7 +288,7 @@ body {
   
   /* Styles for the buttons */
   .gender button {
-    color: #0066FF;
+    color: #000000;
     background-color: #fff;
     font-size: 16px;
     padding: 8px 16px;
@@ -329,9 +296,9 @@ body {
     font-family: 'Work Sans', sans-serif;
   }
   
-  /* Styles for the active button */
+  
   .gender button.active {
-    background-color: #0066FF;
+    background-color: #68e2f5;
     color: #ffffff;
   }
   
@@ -357,6 +324,7 @@ body {
     font-size: 20px;
     margin: 20px;
     color: #fff;
+    font-family: 'Tenor Sans', sans-serif;
   }
   
   input {
@@ -370,7 +338,7 @@ body {
   
   .submit-button {
     background-color: #fff;
-    color: #0066FF;
+    color: #000000;
     padding: 10px 20px;
     font-size: 16px;
     border: none;
@@ -405,18 +373,3 @@ body {
   text-align: center;
   }
   
-  .text-main{
-    color: #fff;
-    font-family: 'Work Sans', sans-serif;
-  }
-
-  @media (max-width: 800px) { 
-    .lower-section {
-      flex-direction: column;
-      align-items: center;
-    }
-    
-    .body-of-profile{
-      margin-left: 20%;
-    }
-  }

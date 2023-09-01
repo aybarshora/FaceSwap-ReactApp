@@ -14,96 +14,46 @@
 
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #80C2FF;
+  background-image: url('./bg.png');
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  width: 100vw; 
+  height: 100vh;
 }
+
 
 .main-container {
+  width: 100vw; 
+  height: 100vh;
+  background-image: url('./bg.png');
+  background-size:cover; 
+  background-repeat: no-repeat; 
   max-width: 800px;
-  margin: 8% auto;
-  padding: 20px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+.right-side {
+  text-align: center;
+
+}
+
+.image-example {
+  max-width: 80%;
+  height: auto;
   border-radius: 8px;
+  
 }
 
-.upper-section {
-  display: flex;
-  align-items: center;
-  margin-bottom: 30px;
-}
 
-.left-side {
-  flex: 1;
-  padding: 20px;
-}
-
-.left-side h1 {
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 700;
-  font-size: 50px;
+.main-text{
+  font-family: 'Tenor Sans', sans-serif;  
+  font-size: 60px;
   margin: 0;
   color: #FFFFFF;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-.left-side p {
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  color: #FFFFFF;
-  margin: 10px 0;
-}
-
-.right-side img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
-}
-
-
-
-/* Optional styles for better responsiveness */
-@media (max-width: 600px) {
-  .main-container {
-    padding: 10px;
-  }
-
-  .left-side h1 {
-    font-size: 24px;
-  }
-
-  .left-side p {
-    font-size: 14px;
-  }
-
-  .right-side img {
-    border-radius: 6px;
-  }
-
-  .lower-section img {
-    max-width: 200px;
-  }
-}
-
-/********/
-
-/* reset */
-
-
-.top, .bottom {
-  background-color: #DDE7D8;
-  padding: 20px;
-}
-
-.top {
-  align-self: flex-start;
-}
-
-.bottom {
-  align-self: flex-end;
-  padding: 40px;
-}
 
 .text-h2{
     font-family: 'Work Sans', sans-serif;
@@ -126,8 +76,8 @@ body {
 .start-button {
   display: inline-block;
   padding: 20px 40px;
-  background-color: #007bff;
-  color: white;
+  background-color: #D9D9D9;
+  color: black;
   border: none;
   border-radius: 10px;
   font-size: 24px;
@@ -140,9 +90,8 @@ body {
 }
 
 .start-button:hover {
-  background-color: #0056b3;
+  background-color: #2bfefe;
   transform: scale(1.05);
 }
 
-/* You can customize the hover effect and other properties as needed */
 
