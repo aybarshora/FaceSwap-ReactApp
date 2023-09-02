@@ -14,7 +14,7 @@ function FakeLoadingImage() {
 
   async function fetchData() {
     const apiUrl = `https://batyr-swap.duckdns.org/api/faces/${id}`;
-    console.log(id); 
+    console.log(`Getting photo for thank you page: ${id}`); 
   
     try {
       const response = await axios.get(apiUrl);
@@ -41,9 +41,7 @@ function FakeLoadingImage() {
     }, 10000);
   }
 
-    useEffect(() => {
-      fetchData();
-    }, [])
+    fetchData();
 
   return (
     <div>
