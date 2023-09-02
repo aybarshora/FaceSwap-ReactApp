@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useGlobalContext } from '../../components/GlobalVariable/GlobalProvider';
 import { logging } from "../../services/loggingService";
+import './FakeLoadingImage';
+import { ColorRing } from 'react-loader-spinner';
 
 
 function FakeLoadingImage() {
@@ -46,7 +48,16 @@ function FakeLoadingImage() {
   return (
     <div>
       {isLoading ? 
-      (<div>...
+      (<div>
+         <ColorRing
+  visible={true}
+  height="80"
+  width="80"
+  ariaLabel="blocks-loading"
+  wrapperStyle={{}}
+  wrapperClass="blocks-wrapper"
+  colors={['#e15b64', '#f47e60', '#f8b26a', '#abbd81', '#849b87']}
+/>
          <p>Ваше фото готовится</p>
          <p>Это может занять несколько минут</p>
       </div>):
