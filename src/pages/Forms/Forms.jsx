@@ -163,6 +163,25 @@ const Forms = () => {
     };
   
 
+    const handleChange = (e) => {
+      const imageFile = e.target.files[0];
+      try {
+        const compressedFile = imageFile;
+        console.log('Compressed image:', compressedFile);
+        
+        setFormData({
+          ...formData,
+          imageForView: URL.createObjectURL(imageFile),
+          yourImage: compressedFile,
+        });
+      } catch (error) {
+        console.error('Image compression error:', error);
+      }
+      
+    };
+
+   
+
   return (
     <div>  
       <div className="main-div">
@@ -170,6 +189,23 @@ const Forms = () => {
       
       <div className="lower-section">
         <Profile className="profile-div" sendDataToParent={handleReceiveData} showPopup={showPopup} />
+        <div className="block-div">
+       <h2 className="text-h2">Ваше фото:</h2>
+          {formData.yourImage ? (
+            <div >
+              <img src={formData.imageForView} alt="Photo" id="upload-photo" className="img-after" />
+              <label className="btn-photo">
+                Выбрать фото с устройства<input type="file" accept="image/jpeg, image/jpg, image/png" onChange={handleChange} /> </label>
+            </div>
+          ) : (
+            <div className="block-div">
+              <img src={person} alt="Photo" id="upload-photo" />
+              <label className="btn-photo" >
+              Выбрать фото с устройства  <input type="file" accept="image/jpeg, image/jpg, image/png" onChange={handleChange} />
+              </label>
+            </div>
+            
+          )}</div>
            <span className="error-message">{formErrors.yourImage}</span>
         </div>
 

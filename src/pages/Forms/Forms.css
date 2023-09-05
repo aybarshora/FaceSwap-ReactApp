@@ -67,7 +67,7 @@
   }
 
   .block-div{
-    margin-top: 78px;
+    margin-top: 30px;
     width: 300px;
     text-align: center; 
   }
@@ -77,12 +77,11 @@
   }
   
   .lower-section label {
-    
     display: inline-block;
     margin: 30px;
     padding: 10px;
     background-color: #fff;
-    color: #0066FF;
+    color: #000;
     border-radius: 8px;
     cursor: pointer;
   }
@@ -319,7 +318,6 @@
   label {
     display: block;
     font-size: 5px;
-    font-family: 'Work Sans', sans-serif;
     font-weight: 400;
     font-size: 20px;
     margin: 20px;
@@ -357,7 +355,7 @@
   }
   
   .text-h2{
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Tenor Sans', sans-serif;    
     font-weight: 700;
     font-size: 30px;
     margin: 20px;
