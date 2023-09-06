@@ -13,14 +13,11 @@ const Main = () => {
 
   return (
     <div>
-    
-    
       <div className="main-container">
         {/* Upper Section */}
         <div className="upper-section">
           <div className="left-side">
             <div className="main-text">Почувствуй себя сарматом</div>
-  
           </div>
           <div className="right-side">
             <img src={example} alt="Hero Image" className="image-example" />
